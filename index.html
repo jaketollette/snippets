@@ -3,33 +3,244 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Document</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
         <link href="https://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab|Roboto:400,700,900" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-      <header id="uni-header" class="SiteHeader">
-        <nav>
-          <div id="nav-left">
-            <ul class="btn-list">
-              <a href="#" class="btn"><li>One</li></a>
-              <a href="#" class="btn"><li>Two</li></a>
-              <a href="#" class="btn btn-end btn-icon"><li><img src="images/search.png" alt=""></li></a>
-              <a href="#" class="btn btn-separate"><li>Three</li></a>
-            </ul>
-          </div>
-          <div id="nav-middle" class="logo center"><img src="images/logo.png" alt=""></div>
-          <div id="nav-right">
-            <ul class="nav-list">
-              <a href="#"><li>Amenities</li></a>
-              <a href="#"><li>About</li></a>
-              <a href="#"><li>Apartments</li></a>
-              <a href="#" class="btn btn-separate"><li>Residents</li></a>
-            </ul>
-          </div>
-        </nav>
-      </header>
+        <div id="PageWrapper">
+            <header id="uni-header" class="SiteHeader">
+                <nav>
+                    <div id="nav-left">
+                        <ul class="btn-list">
+                            <a href="#" class="btn">
+                                <li>One <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i></li>
+                            </a>
+                            <a href="#" class="btn">
+                                <li>Two <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i></li>
+                            </a>
+                            <a href="#" class="btn btn-end btn-icon">
+                                <li><i class="fa fa-search" aria-hidden="true"></i></li>
+                            </a>
+                            <a href="#" class="btn btn-separate">
+                                <li>Availability</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div id="nav-middle" class="logo center"><img src="images/logo.png" alt=""></div>
+                    <div id="nav-right">
+                        <ul class="nav-list">
+                            <a href="#">
+                                <li>Residences</li>
+                            </a>
+                            <a href="#">
+                                <li>Amenities</li>
+                            </a>
+                            <a href="#">
+                                <li>Neighborhood</li>
+                            </a>
+                            <a href="#">
+                                <li>Blog</li>
+                            </a>
+                            <a href="#" class="btn btn-separate">
+                                <li>Residents</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section id="Hero">
+                    <div class="container">
+                        <div id="HeroSlider">
+                            <img src="images/interior_1.jpg" alt="Interior_1">
+                            <img src="images/interior_2.jpg" alt="Interior_2">
+                            <img src="images/interior_3.jpg" alt="Interior_3">
+                        </div>
+                    </div>
+                </section>
+                <section id="Section_1">
+                    <div class="grid-items">
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Grid Item With an Image</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item grid-item-big">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Another Wide Item</h1>
+                            <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Last Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Last Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>A Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                    </div>
+                </section>
+                <section id="Section_2">
+                    <div class="container">
+                      <header class="section-header"><h2>Modern</h2><span>Living</span></header>
+                      <div class="decoration"><img src="images/logo.png" alt=""></div>
+                        <div id="Section_2_Slider">
+                            <img src="images/interior_1.jpg" alt="Interior_1">
+                            <img src="images/interior_2.jpg" alt="Interior_2">
+                            <img src="images/interior_3.jpg" alt="Interior_3">
+                        </div>
+                    </div>
+                </section>
+                <section id="Section_3">
+                    <div class="grid-items">
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Grid Item With an Image</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item grid-item-big">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Another Wide Item</h1>
+                            <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Last Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Last Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>A Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                    </div>
+                </section>
+                <section id="Section_4">
+                    <div class="container">
+                        <div id="Section_4_Slider">
+                            <img src="images/interior_1.jpg" alt="Interior_1">
+                            <img src="images/interior_2.jpg" alt="Interior_2">
+                            <img src="images/interior_3.jpg" alt="Interior_3">
+                        </div>
+                    </div>
+                </section>
+                <section id="Section_5">
+                    <div class="grid-items">
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Grid Item With an Image</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item grid-item-big">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Another Wide Item</h1>
+                            <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Last Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Last Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>A Grid Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                        <a href="javascript:void(0)" class="grid-item">
+                            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+                            <h1>Item</h1>
+                            <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+                        </a>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer" role="contentinfo">
+                <div class="footer-logo">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image">
+                </div>
+                <ul>
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="javascript:void(0)">Products</a></li>
+                </ul>
+
+                <div class="footer-secondary-links">
+                    <ul>
+                        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    </ul>
+
+                    <ul class="footer-social">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+        <script src="js/general.js"></script>
     </body>
 
 </html>

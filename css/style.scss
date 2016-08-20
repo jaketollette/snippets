@@ -1,4 +1,6 @@
-$max-width: 1920px;
+@import "bourbon/bourbon.scss";
+@import "neat/neat";
+$max-width: 1400px;
 $base-font-size: 16px;
 
 $header-font:  'Oswald', sans-serif;
@@ -29,12 +31,44 @@ $body-font: 'Roboto Slab', serif;
 html {
   max-width: $max-width;
   font-size: rem($base-font-size);
+  margin: 0 auto;
 }
 body {
   overflow-x: hidden;
-  font-famliy: $body-font;
+  font-family: $body-font;
 }
-
+// SLICK OVERRIDE
+.slick-dots {
+  text-align: right;
+  li {
+    margin: 0;
+    transform: scale3d(2,2,2);
+  }
+}
+.slick-next, .slick-prev {
+  z-index: 1;
+  transform: scale3d(2,2,2);
+}
+.slick-next {
+  right: 25px;
+}
+.slick-prev {
+  left: 25px;
+}
+// DEBUGGING & SETUP
+section {
+  border: 1px solid red;
+  margin-bottom: 5rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.decoration {
+  border: 1px solid yellow;
+}
+.section-header {
+  border: 1px solid blue;
+}
 img {
   max-width: 100%;
 }
@@ -69,15 +103,57 @@ a {
     border-color: rgb(200, 150, 150);
   }
 }
+#PageWrapper {
+  @include outer-container;
+  header { @include span-columns(12); }
+  main { @include span-columns(12); }
+  section { @include span-columns(12);}
+  .container { @include outer-container(90%); background: green; position: relative;}
+}
+// DECORATIONS
+.decoration {
+  float: left;
+  position: absolute;
+  z-index: 2;
+}
+#Section_2 .decoration {
+  top: rem(-45);
+  right: rem(-45);
+}
+
+//SECTION HEADERS
+section header.section-header {
+  @extend .decoration;
+  text-align: center;
+  margin-right: auto !important;
+  h2 {
+    margin: 0;
+    font-size: 3em;
+  }
+  span {
+    @extend h2;
+    font-size: 2em;
+    line-height: .5;
+  }
+}
+#Section_2 .section-header {
+  top: -40px;
+}
 // HEADER & NAV
 #uni-header {
   width: 100%;
   float: left;
-  position:absolute;
+  position:relative;
   top: 0;
   left: 0;
-  box-shadow: 0px 3px 4px rgba(10,10,10,.8);
   height: rem(100);
+  z-index: 1;
+  @media screen and (max-width: 1146px){
+    font-size: .8em;
+  }
+  @media screen and (max-width: 940px) {
+    font-size: .63em;
+  }
   nav {
     width: 100%;
     float: left;
@@ -85,10 +161,10 @@ a {
       box-sizing: border-box;
       float: left;
       &#nav-left, &#nav-right{
-        width: 40%;
+        width: 42.5%;
       }
       &#nav-middle {
-        width: 20%;
+        width: 15%;
       }
     }
     ul.btn-list {
@@ -105,14 +181,15 @@ a {
         border-bottom: 1px solid #888;
         border-top: 1px solid #888;
         border-left: 1px solid #888;
+        &:hover {
+          border: 1px solid red;
+        }
         &.btn.btn-end {
           border-right: 1px solid #888;
-        }
-        &.btn-icon {
-          padding-left: 5px;
-          padding-right:5px;
-          img {
-            max-width: 1rem;
+          padding-left: rem(10);
+          padding-right: rem(10);
+          &:hover {
+            border: 1px solid blue;
           }
         }
         li {
@@ -145,9 +222,14 @@ a {
         &.btn.btn-separate {
           float: right;
           padding-top: .9%;
+          padding-left: rem(15);
+          padding-right: rem(15);
         }
       }
     }
+  }
+  &.fixed {
+    box-shadow: 0px 3px 4px rgba(10,10,10,.8);
   }
 }
 @media screen and (max-width: 768px) {
@@ -156,5 +238,223 @@ a {
     ul.btn-list {
       display:none;
     }
+  }
+}
+
+//FOOTER
+
+.footer {
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $footer-background;
+  display: inline-block;
+  padding: $base-spacing;
+  width: 100%;
+
+  .footer-logo {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  }
+
+  ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    @include media($large-screen) {
+      float: left;
+      line-height: 1.8em;
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    padding-right: 1em;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+    }
+
+    li {
+      font-size: 0.8em;
+    }
+
+    ul.footer-social {
+      margin: 1em 0 0 0;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        float: left;
+        font-size: 1em;
+        line-height: 0;
+        margin: 0;
+        padding-right: 0.7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        padding: 1px;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//FILLER STUFF
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items {
+  $action-color: #477DCA !default;
+  $base-background-color: white !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $grid-items-background: $base-background-color;
+  $grid-item-background: desaturate($action-color, 30%);
+  $grid-item-colors:
+    desaturate($action-color, 30%),
+    #3581A5,
+    #5FBEBE,
+    #98C79A,
+    #A7A891,
+    #BDCC97,
+    #979EA0;
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+
+  .grid-item {
+    background: $grid-item-background;
+    border-bottom: $grid-item-border-size solid $grid-items-background;
+    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-top: 0;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    outline: none;
+    overflow: hidden;
+    padding: 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    @for $i from 1 through length($grid-item-colors) {
+// assign colors from $grid-item-colors list
+      &:nth-child(#{$i}) {
+        $background-from-list: nth($grid-item-colors, $i);
+        background-color: $background-from-list;
+        box-shadow: inset 0 0 1px 2px darken($background-from-list, 10%);
+
+        &:focus,
+        &:hover {
+          background-color: darken($background-from-list, 10%);
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .grid-item img {
+    display: block;
+    height: 3em;
+    margin: 0 auto 1em;
+  }
+
+  .grid-item h1 {
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
+  }
+
+  .grid-item p {
+    color: transparentize($grid-item-color, 0.3);
+    line-height: 1.5em;
+    margin: auto;
+
+    @include media($medium-screen) {
+      max-width: 70%;
+    }
+  }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+
+  .grid-item-image {
+    background: url("https:
+//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
