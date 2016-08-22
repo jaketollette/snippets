@@ -73,6 +73,7 @@ section {
 }
 img {
   max-width: 100%;
+  transition: all .4s ease;
 }
 // TYPOGRAPHY
 @mixin typography {

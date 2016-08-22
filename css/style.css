@@ -43,7 +43,8 @@ section {
   border: 1px solid blue; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  transition: all .4s ease; }
 
 h1, h2, section header.section-header span, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
