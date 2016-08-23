@@ -1,0 +1,109 @@
+@import 'normalize';
+@import "bourbon/bourbon.scss";
+@import "neat/neat";
+html {
+    max-width: 1400px;
+    font-size: 1rem;
+    margin: 0 auto;
+    background: rgba(coral, .8);
+}
+body {
+    margin: 0 auto;
+    background: rgba(lightblue, .8);
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all .4s;
+}
+a:hover,
+a:focus,
+a:active,
+a.selected {
+    color: #f05756;
+}
+
+#PageWrapper {
+    @include outer-container;
+    background: #fff;
+    min-height: 100vh;
+    -webkit-box-shadow: 0 5px 17px 3px rgba(50, 50, 50, 0.55);
+    -moz-box-shadow: 0 5px 17px 3px rgba(50, 50, 50, 0.55);
+    box-shadow: 0 5px 17px 3px rgba(50, 50, 50, 0.55);
+    position: relative;
+    overflow-x: hidden;
+}
+header {
+  @include span-columns(12);
+  min-height: 100px;
+  background: #333;
+}
+
+.action-items {
+  position: absolute;
+  top: 7.28em;
+  left: 0;
+  transition: all .4s ease;
+  div.close {
+    background: #ff4d4d;
+    color: #fff;
+    text-align: center;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -1em;
+    z-index: 1;
+    width: 1em;
+    transition: all .2s ease;
+  }
+  div.notice {
+    position: absolute;
+    display: block;
+    background: #880001;
+    color: #fff;
+    right: -1em;
+    top: 0em;
+    z-index: 0;
+    width: 1em;
+    text-align: center;
+    z-index: -2;
+    transition: all .2s ease;
+  }
+  ul {
+    display: inline-block;
+    margin: 0;
+    li {
+      display: block;
+      background: lighten(red, 15%);
+      padding: 20px;
+      margin-bottom: 1.5px;
+      a {
+        color: #fff;
+        display: block;
+        text-align: right;
+        i {
+          padding-left: 10px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &.hide {
+    left: -6em;
+    transition: all .4s ease;
+    div.close {
+      z-index: -1;
+      right: -1em;
+      top: 1em;
+      transition: all .2s ease;
+    }
+    div.notice {
+      z-index: 1;
+    }
+  }
+}
