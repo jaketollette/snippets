@@ -24,6 +24,15 @@
           <li><a href="#">Messages <i class="fa fa-paper-plane"></i></a></li>
         </ul>
       </div>
+      <div class="box">
+        &nbsp;
+      </div>
+      <div class="box featured">
+        &nbsp;
+      </div>
+      <div class="box featured">
+        &nbsp;
+      </div>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
@@ -34,6 +43,8 @@
       }, function(){
         $(this).addClass('hide');
       });
+      var feature = '<div class="triangle"><span>Featured</span></div>';
+      $('.featured').append(feature);
     });
   </script>
   </body>

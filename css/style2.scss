@@ -110,3 +110,38 @@ header {
     }
   }
 }
+
+.box {
+  float: left;
+  width: 500px;
+  height: 500px;
+  background: orange;
+  margin-left: 14em;
+  margin-top: 5em;
+  position: relative;
+}
+.featured {
+  border: 2px solid #f05656;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8em 8em 0;
+  border-color: transparent #f05656 transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  span {
+    transform: rotate(45deg);
+    display: inline-block;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    letter-spacing: .09rem;
+    color: #FFF;
+    position: absolute;
+    font-size: 1em;
+    top: 2.5em;
+    left: 2.5em;
+  }
+}
