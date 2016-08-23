@@ -48,6 +48,9 @@ header {
   position: absolute;
   top: 7.28em;
   left: 0;
+  font-family: 'Oswald';
+  letter-spacing: .07rem;
+  text-transform: uppercase;
   transition: all .4s ease;
   div.close {
     background: #ff4d4d;
@@ -66,10 +69,10 @@ header {
     display: block;
     background: #880001;
     color: #fff;
-    right: -1em;
+    right: -1.5em;
     top: 0em;
     z-index: 0;
-    width: 1em;
+    width: 1.5em;
     text-align: center;
     z-index: -2;
     transition: all .2s ease;
@@ -87,14 +90,14 @@ header {
         display: block;
         text-align: right;
         i {
-          padding-left: 10px;
+          padding-left: 1em;
           display: inline-block;
         }
       }
     }
   }
   &.hide {
-    left: -6em;
+    left: -6.7em;
     transition: all .4s ease;
     div.close {
       z-index: -1;
